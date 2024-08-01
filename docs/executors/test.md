@@ -1,4 +1,4 @@
-# @nx-go/nx-go:test
+# @clsx524/nx-go:test
 
 Uses `go test` command to run tests of a Go project.
 

@@ -7,7 +7,7 @@ jest.mock('@nx/devkit', () => ({
     fileName: 'backend-filename',
     propertyName: 'backendFilename',
   }),
-  readJson: jest.fn().mockReturnValue({ name: '@nx-go/backend' }),
+  readJson: jest.fn().mockReturnValue({ name: '@clsx524/backend' }),
 }));
 jest.mock('@nx/devkit/src/generators/project-name-and-root-utils', () => ({
   determineProjectNameAndRootOptions: jest.fn().mockReturnValue({

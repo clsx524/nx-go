@@ -21,7 +21,7 @@ export default async function update(tree: Tree) {
     for (const target of Object.values(projectConfig.targets)) {
       // lint executor: args (string) -> args (array)
       if (
-        target.executor === '@nx-go/nx-go:lint' &&
+        target.executor === '@clsx524/nx-go:lint' &&
         target.options &&
         'args' in target.options &&
         typeof target.options['args'] === 'string'
@@ -32,7 +32,7 @@ export default async function update(tree: Tree) {
 
       // serve executor: arguments (array) -> args (array)
       if (
-        target.executor === '@nx-go/nx-go:serve' &&
+        target.executor === '@clsx524/nx-go:serve' &&
         target.options &&
         'arguments' in target.options
       ) {
@@ -42,7 +42,7 @@ export default async function update(tree: Tree) {
       }
 
       // test executor: skipCover -> cover ; skipRace -> race ; add verbose
-      if (target.executor === '@nx-go/nx-go:test') {
+      if (target.executor === '@clsx524/nx-go:test') {
         target.options ??= {};
         const oldOptions = Object.assign({}, target.options);
 

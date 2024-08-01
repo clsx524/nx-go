@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/schema",
-  "$id": "@nx-go/nx-go:library",
+  "$id": "@clsx524/nx-go:library",
   "title": "Go library generator options",
   "type": "object",
   "properties": {

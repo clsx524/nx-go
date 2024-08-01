@@ -23,7 +23,7 @@ describe('nx-go', () => {
 
     // The plugin has been built and published to a local registry in the jest globalSetup
     // Install the plugin built with the latest source code into the test repo
-    execSync(`npm install -D @nx-go/nx-go@latest`, {
+    execSync(`npm install -D @clsx524/nx-go@latest`, {
       cwd: projectDirectory,
       stdio: 'inherit',
       env: process.env,
@@ -36,19 +36,19 @@ describe('nx-go', () => {
 
   it('should be installed', () => {
     // npm ls will fail if the package is not installed properly
-    execSync('npm ls @nx-go/nx-go', {
+    execSync('npm ls @clsx524/nx-go', {
       cwd: projectDirectory,
       stdio: 'inherit',
     });
   });
 
   it('should initialize the workspace', async () => {
-    await runNxCommandAsync(`generate @nx-go/nx-go:init`);
+    await runNxCommandAsync(`generate @clsx524/nx-go:init`);
     expect(() => checkFilesExist(`go.work`)).not.toThrow();
   });
 
   it('should create an application', async () => {
-    await runNxCommandAsync(`generate @nx-go/nx-go:application ${appName}`);
+    await runNxCommandAsync(`generate @clsx524/nx-go:application ${appName}`);
 
     expect(() => checkFilesExist(`${appName}/main.go`)).not.toThrow();
     expect(() => checkFilesExist(`${appName}/go.mod`)).not.toThrow();
@@ -57,7 +57,7 @@ describe('nx-go', () => {
   });
 
   it('should create a library', async () => {
-    await runNxCommandAsync(`generate @nx-go/nx-go:library ${libName}`);
+    await runNxCommandAsync(`generate @clsx524/nx-go:library ${libName}`);
 
     expect(() => checkFilesExist(`${libName}/${libName}.go`)).not.toThrow();
     expect(() => checkFilesExist(`${libName}/go.mod`)).not.toThrow();
@@ -98,7 +98,7 @@ describe('nx-go', () => {
 
   describe('Generate', () => {
     beforeAll(() =>
-      addNxTarget(appName, 'generate', { executor: '@nx-go/nx-go:generate' })
+      addNxTarget(appName, 'generate', { executor: '@clsx524/nx-go:generate' })
     );
 
     it('should execute go generate', async () => {

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/schema",
-  "$id": "@nx-go/nx-go:init",
+  "$id": "@clsx524/nx-go:init",
   "title": "Go init generator options",
   "type": "object",
   "properties": {

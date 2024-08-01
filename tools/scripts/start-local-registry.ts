@@ -7,7 +7,7 @@ import { execSync } from 'child_process';
 
 export default async () => {
   // local registry target to run
-  const localRegistryTarget = '@nx-go/source:local-registry';
+  const localRegistryTarget = '@clsx524/source:local-registry';
   // storage folder for the local registry
   const storage = './tmp/local-registry/storage';
 

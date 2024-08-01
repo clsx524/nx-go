@@ -9,8 +9,8 @@ describe('Npm bridge', () => {
     it('should return project scope', () => {
       jest
         .spyOn(nxDevkit, 'readJson')
-        .mockReturnValueOnce({ name: '@nx-go/nx-go' });
-      expect(getProjectScope(createTreeWithEmptyWorkspace())).toBe('nx-go');
+        .mockReturnValueOnce({ name: '@clsx524/nx-go' });
+      expect(getProjectScope(createTreeWithEmptyWorkspace())).toBe('clsx524');
     });
   });
 });

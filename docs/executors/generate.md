@@ -1,4 +1,4 @@
-# @nx-go/nx-go:generate
+# @clsx524/nx-go:generate
 
 Runs `go generate` to execute an external tool which will generate code.
 

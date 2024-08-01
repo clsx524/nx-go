@@ -1,4 +1,4 @@
-# @nx-go/nx-go:application
+# @clsx524/nx-go:application
 
 Creates a Go application.
 
@@ -7,7 +7,7 @@ Creates a Go application.
 Create an application named **api**:
 
 ```shell
-nx g @nx-go/nx-go:application api
+nx g @clsx524/nx-go:application api
 ```
 
 ## Options

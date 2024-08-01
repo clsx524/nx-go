@@ -1,4 +1,4 @@
-# @nx-go/nx-go:lint
+# @clsx524/nx-go:lint
 
 Formats and lints a project using the [go fmt](https://go.dev/blog/gofmt) tool by default.
 
@@ -11,7 +11,7 @@ Usage with [revive](https://github.com/mgechev/revive) (need to be installed bef
 ```json
 {
   "lint": {
-    "executor": "@nx-go/nx-go:lint",
+    "executor": "@clsx524/nx-go:lint",
     "options": {
       "linter": "revive",
       "args": [

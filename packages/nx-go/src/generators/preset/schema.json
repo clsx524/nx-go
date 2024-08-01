@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/schema",
-  "$id": "@nx-go/nx-go:preset",
+  "$id": "@clsx524/nx-go:preset",
   "title": "Go preset generator options",
   "type": "object",
   "properties": {

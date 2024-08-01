@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/schema",
-  "$id": "@nx-go/convert-to-one-mod",
+  "$id": "@clsx524/convert-to-one-mod",
   "title": "Go convert-to-one-mod generator options",
   "type": "object",
   "properties": {

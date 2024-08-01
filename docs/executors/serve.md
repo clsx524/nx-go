@@ -1,4 +1,4 @@
-# @nx-go/nx-go:serve
+# @clsx524/nx-go:serve
 
 Uses `go run` command to run a Go application.
 

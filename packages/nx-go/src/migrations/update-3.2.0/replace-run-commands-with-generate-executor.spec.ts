@@ -38,7 +38,7 @@ describe('replace-run-commands-with-generate-executor migration', () => {
       await update(tree);
       expect(updateConfig).toHaveBeenCalledWith(tree, 'api', expect.anything());
       expect(updateConfig.mock.calls[0][2].targets.generate).toEqual({
-        executor: '@nx-go/nx-go:generate',
+        executor: '@clsx524/nx-go:generate',
         options: expectedArgs != null ? { args: expectedArgs } : undefined,
       });
     }

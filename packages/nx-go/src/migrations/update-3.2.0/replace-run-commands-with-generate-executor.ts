@@ -29,7 +29,7 @@ export default async function update(tree: Tree) {
       const args: string = command?.replace(generateCommand, '').trim() ?? '';
 
       projectConfig.targets[goGenerateTarget[0]] = {
-        executor: '@nx-go/nx-go:generate',
+        executor: '@clsx524/nx-go:generate',
         options: args.length > 0 ? { args: args.split(' ') } : undefined,
       };
 

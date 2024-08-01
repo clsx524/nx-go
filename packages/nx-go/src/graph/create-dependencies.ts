@@ -10,6 +10,7 @@ import { execSync } from 'child_process';
 import { readFileSync } from 'fs';
 import { dirname, extname } from 'path';
 import { parseGoList } from '../utils';
+import * as which from 'which';
 
 type ProjectRootMap = Map<string, string>;
 
@@ -115,6 +116,9 @@ const getProjectNameForGoImport = (
 };
 
 export const createDependencies: CreateDependencies = async (_, context) => {
+  const resolvedOrNull = await which('go', { nothrow: true });
+  if (!resolvedOrNull) return;
+
   const dependencies: RawProjectGraphDependency[] = [];
 
   let goModules: GoModule[] = null;

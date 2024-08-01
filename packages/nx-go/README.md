@@ -1,3 +1,3 @@
-# @nx-go/nx-go
+# @clsx524/nx-go
 
 [See main README file](https://github.com/nx-go/nx-go#readme)

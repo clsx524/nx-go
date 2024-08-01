@@ -17,11 +17,11 @@ describe('update-executors-options migration', () => {
       ['api', { root: '', targets: { target } } as ProjectConfiguration],
     ]);
 
-  it('should update options of @nx-go/nx-go:lint executor', async () => {
+  it('should update options of @clsx524/nx-go:lint executor', async () => {
     const updateConfig = jest.spyOn(devkit, 'updateProjectConfiguration');
     jest.spyOn(devkit, 'getProjects').mockReturnValue(
       createProjectMapWithTarget({
-        executor: '@nx-go/nx-go:lint',
+        executor: '@clsx524/nx-go:lint',
         options: { linter: 'revive', args: '-config ./revive.toml' },
       })
     );
@@ -33,11 +33,11 @@ describe('update-executors-options migration', () => {
     });
   });
 
-  it('should update options of @nx-go/nx-go:serve executor', async () => {
+  it('should update options of @clsx524/nx-go:serve executor', async () => {
     const updateConfig = jest.spyOn(devkit, 'updateProjectConfiguration');
     jest.spyOn(devkit, 'getProjects').mockReturnValue(
       createProjectMapWithTarget({
-        executor: '@nx-go/nx-go:serve',
+        executor: '@clsx524/nx-go:serve',
         options: { arguments: ['--host', '0.0.0.0'] },
       })
     );
@@ -57,12 +57,12 @@ describe('update-executors-options migration', () => {
     ${{}}                   | ${{ verbose: true, cover: true, race: true }} | ${'no option present'}
     ${null}                 | ${{ verbose: true, cover: true, race: true }} | ${'options object is null'}
   `(
-    'should update options of @nx-go/nx-go:test executor if $description',
+    'should update options of @clsx524/nx-go:test executor if $description',
     async ({ options, result }) => {
       const updateConfig = jest.spyOn(devkit, 'updateProjectConfiguration');
       jest.spyOn(devkit, 'getProjects').mockReturnValue(
         createProjectMapWithTarget({
-          executor: '@nx-go/nx-go:test',
+          executor: '@clsx524/nx-go:test',
           options,
         })
       );
@@ -76,11 +76,11 @@ describe('update-executors-options migration', () => {
 
   it.each`
     executor                | options                                   | description
-    ${'@nx-go/nx-go:lint'}  | ${{ args: ['-config', './revive.toml'] }} | ${'lint executor has already new args format'}
-    ${'@nx-go/nx-go:lint'}  | ${{ linter: 'revive' }}                   | ${'lint executor does not have args option'}
-    ${'@nx-go/nx-go:lint'}  | ${null}                                   | ${'lint executor does not have option'}
-    ${'@nx-go/nx-go:serve'} | ${{ cmd: 'go' }}                          | ${'serve executor does not have arguments option'}
-    ${'@nx-go/nx-go:serve'} | ${null}                                   | ${'serve executor does not have option'}
+    ${'@clsx524/nx-go:lint'}  | ${{ args: ['-config', './revive.toml'] }} | ${'lint executor has already new args format'}
+    ${'@clsx524/nx-go:lint'}  | ${{ linter: 'revive' }}                   | ${'lint executor does not have args option'}
+    ${'@clsx524/nx-go:lint'}  | ${null}                                   | ${'lint executor does not have option'}
+    ${'@clsx524/nx-go:serve'} | ${{ cmd: 'go' }}                          | ${'serve executor does not have arguments option'}
+    ${'@clsx524/nx-go:serve'} | ${null}                                   | ${'serve executor does not have option'}
     ${'invalid'}            | ${{}}                                     | ${'there is no valid executor'}
   `('should do nothing if $description', async ({ executor, options }) => {
     jest

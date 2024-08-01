@@ -78,7 +78,7 @@ describe('application generator', () => {
         targets: {
           ...defaultTargets,
           tidy: {
-            executor: '@nx-go/nx-go:tidy',
+            executor: '@clsx524/nx-go:tidy',
           },
         },
         tags: ['api', 'backend'],

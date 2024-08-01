@@ -27,10 +27,10 @@ export default async function update(tree: Tree) {
 
     if (
       !projectConfig.targets.tidy ||
-      projectConfig.targets.tidy?.executor !== '@nx-go/nx-go:tidy'
+      projectConfig.targets.tidy?.executor !== '@clsx524/nx-go:tidy'
     ) {
       projectConfig.targets.tidy = {
-        executor: '@nx-go/nx-go:tidy',
+        executor: '@clsx524/nx-go:tidy',
       };
       shouldUpdate = true;
     }
